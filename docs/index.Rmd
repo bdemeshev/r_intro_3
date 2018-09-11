@@ -6,8 +6,9 @@ lang: ru-RU
 
 
 * Семинар 1, 10 сентября. Загрузка и первое знакомство с данными
-
-  - Условие и данные, [sem_010.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_010.zip)
+  
+    - Условие и данные, [sem_010.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_010.zip)
+    - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_010_solved.html)
 
 
 * Семинар 2, 17 сентября. Визуализация данных
