@@ -9,6 +9,7 @@ lang: ru-RU
   
     - Условие и данные, [sem_010.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_010.zip)
     - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_010_solved.html)
+    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_010_solutions.html);
 
 
 * Семинар 2, 17 сентября. Визуализация данных
