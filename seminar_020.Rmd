@@ -1,6 +1,6 @@
 ---
 title: 'Семинар 2. Таблицы сопряжённости, корреляции и манипуляции с данными'
-date: 'May 28, 2018'
+date: 'September 17, 2018'
 output:
   html_document:
     keep_md: no
@@ -108,11 +108,13 @@ diamonds_b = mutate(diamonds, new = case_when(
 
 
 Узнаём частотность каждой категории переменной `color`:
+
 ```{r}
 table(diamonds$color)
 ```
 
 Или получаем список категорий без количеств:
+
 ```{r}
 levels(diamonds$color)
 ```
@@ -164,6 +166,7 @@ skim(adult2)
 а на пересечении стоит количество наблюдений.
 
 Таблицу сопряжённости можно создать командой `table()`:
+
 ```{r}
 table(adult2$sector, adult2$wage)
 ```
@@ -249,6 +252,7 @@ freq_table
 * Упражнение 4.
 
 Опишите словами, что изображено на графике:
+
 ```{r}
 mosaic(data = Arthritis, ~ Sex + Treatment + Improved, shade = TRUE, legend = TRUE)
 ```
@@ -362,6 +366,7 @@ report
 Попробуем быть занудами :)
 
 Обычная диаграмма рассеяния!
+
 ```{r}
 ggplot(data = diamonds) +
   geom_point(aes(x = carat, y = price)) +
@@ -369,6 +374,7 @@ ggplot(data = diamonds) +
 ```
 
 Задействуем эстетику цвета!
+
 ```{r}
 ggplot(data = diamonds) +
   geom_point(aes(x = carat, y = price, color = color)) +
@@ -409,6 +415,7 @@ ggplot(data = diamonds) +
 ```
 
 Нарисуйте гистограмму пробега на одну милю `mpg`:
+
 ```{r}
 # ggplot(data = mtcars) +
 #  geom_histogram(aes(x = ___)) +
@@ -468,11 +475,13 @@ ggplot(data = mtcars2) +
 И для примера более сложный график с кучей слоёв!
 
 Вспомним старую таблицу частот:
+
 ```{r}
 freq_table
 ```
 
 Нарисуем две вариации потокового графика с помощью пакета `ggalluvial`
+
 ```{r}
 ggplot(data = freq_table,
        aes(weight = freq, axis1 = sector, axis2 = wage)) +
