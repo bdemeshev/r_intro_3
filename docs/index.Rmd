@@ -23,6 +23,8 @@ lang: ru-RU
 
 * Семинар 3, 24 сентября. Метод главных компонент
 
+    - Условие и данные, [sem_030.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_030.zip)
+
 
 * Семинар 4, 1 октября. Кластерный анализ
 
