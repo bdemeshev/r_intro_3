@@ -15,6 +15,10 @@ lang: ru-RU
 * Семинар 2, 17 сентября. Качественные переменные, визуализация, ещё немного манипуляций с данными
 
     - Условие и данные, [sem_020.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_020.zip)
+    - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_020_solved.html)
+    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_020_solutions.html);
+    - Большая библиотека всевозможных графиков: https://www.r-graph-gallery.com
+    - [Курс](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) на DataCamp по основнам работы с ggplot2.
 
 
 * Семинар 3, 24 сентября. Метод главных компонент
@@ -40,21 +44,19 @@ lang: ru-RU
 
 
 Место: Шаболовка 26, 5310. Приносите свои ноутбуки!!!
-
-
-#### Перед первым занятием:
-
-1. Установите [R + Rstudio по инструкции](http://bdemeshev.github.io/installation/r/R_installation.html)
-1. Установите [дистрибутив Latex](https://www.tug.org/texlive/acquire-netinstall.html)
-1. Установите [Github desktop](https://desktop.github.com/)
-1. Зарегистрируйтесь на [datacamp.com](http://datacamp.com/)
-1. Зарегистрируйтесь на [github.com](http://github.com/)
     
 
 #### Финальное домашнее задание
 
+Состоит из двух частей: курс на [DataCamp](https://www.datacamp.com/) и краткий анализ любого набора данных, [(минимальные требования)](http://bdemeshev.github.io/r_intro_3/hw_final.html).
 
-...
+* Стратегия 1: пройти курс [Communicating with data in tidyverse](https://www.datacamp.com/courses/communicating-with-data-in-the-tidyverse) на datacamp.com (4 балла) + полностью выполнить анализ набора данных по [заданию](http://bdemeshev.github.io/r_intro_3/hw_final.html) (6 баллов)
+
+* Стратегия 2: пройти курс [Communicating with data in tidyverse](https://www.datacamp.com/courses/communicating-with-data-in-the-tidyverse) на datacamp.com (4 балла) + пройти ещё один любой курс по R на datacmp.com (4 балла) + выполнить упражнения из [задания](http://bdemeshev.github.io/r_intro_3/hw_final.html) на 2 балла (2 балла)
+
+Важно! Формат сдачи задания по анализу данных — два файла, Rmd и html.
+
+**Дедлайн**:
 
 
 #### Полезности:
@@ -65,7 +67,13 @@ lang: ru-RU
 * Предыдущие реинкарнации курса: [раз](http://bdemeshev.github.io/r_socio_hse/) и [два](http://bdemeshev.github.io/r_intro_2/)
 
 
+#### Перед первым занятием:
 
+1. Установите [R + Rstudio по инструкции](http://bdemeshev.github.io/installation/r/R_installation.html)
+1. Установите [дистрибутив Latex](https://www.tug.org/texlive/acquire-netinstall.html)
+1. Установите [Github desktop](https://desktop.github.com/)
+1. Зарегистрируйтесь на [datacamp.com](http://datacamp.com/)
+1. Зарегистрируйтесь на [github.com](http://github.com/)
 
 -------
 Созданные для данного курса материалы распространяются по лицензии [Creative Commons Attribution-NonCommercial-ShareAlike](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ru)
