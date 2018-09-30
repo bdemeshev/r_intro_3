@@ -9,21 +9,24 @@ lang: ru-RU
   
     - Условие и данные, [sem_010.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_010.zip)
     - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_010_solved.html)
-    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_010_solutions.html);
+    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_010_solutions.html)
 
 
 * Семинар 2, 17 сентября. Качественные переменные, визуализация, ещё немного манипуляций с данными
 
     - Условие и данные, [sem_020.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_020.zip)
     - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_020_solved.html)
-    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_020_solutions.html);
+    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_020_solutions.html)
     - Большая библиотека всевозможных графиков: https://www.r-graph-gallery.com
-    - [Курс](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) на DataCamp по основнам работы с ggplot2.
+    - [Курс](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) на DataCamp по основнам работы с ggplot2
 
 
 * Семинар 3, 24 сентября. Метод главных компонент
 
     - Условие и данные, [sem_030.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_030.zip)
+    - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_030_solved.html)
+    - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_030_solutions.html)
+    - [Визуализация](http://setosa.io/ev/principal-component-analysis/) метода главных компонент
 
 
 * Семинар 4, 1 октября. Кластерный анализ
@@ -58,7 +61,7 @@ lang: ru-RU
 
 Важно! Формат сдачи задания по анализу данных — два файла, Rmd и html.
 
-**Дедлайн**:
+**Дедлайн**: 19 ноября
 
 
 #### Полезности:
