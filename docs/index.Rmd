@@ -28,6 +28,8 @@ lang: ru-RU
 
 * Семинар 4, 1 октября. Кластерный анализ
 
+    - Условие и данные, [sem_040.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_040.zip)
+
 
 * Семинар 5, 8 октября. Множественная регрессия.
 
