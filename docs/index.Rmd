@@ -36,7 +36,11 @@ lang: ru-RU
     - [Решение домашней работы](http://bdemeshev.github.io/r_intro_3/hw_040_solutions.html)
 
 
-* Семинар 5, 8 октября. Множественная регрессия.
+* Семинар 5, 8 октября. Кластеризация — окончание.
+
+    - Условие и данные, [sem_050.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_050.zip)
+
+
 
 !!!15 октября занятий не будет
 

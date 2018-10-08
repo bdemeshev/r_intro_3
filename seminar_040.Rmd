@@ -1,20 +1,24 @@
 ---
-title: 'Семинар 4. Кластерный анализ'
-date: 'Октябрь 1, 2018'
+title: "Семинар 4. Кластерный анализ"
+editor_options:
+  chunk_output_type: console
+date: "Октябрь 1, 2018"
 output:
   html_document:
     keep_md: no
     number_sections: yes
     toc: yes
+  word_document:
+    toc: yes
+  pdf_document:
+    toc: yes
 lang: ru-RU
-editor_options:
-  chunk_output_type: console
 ---
 
 
 Подключаем пакеты!
 
-```{r}
+```{r, "setup-chunk", message=FALSE, warning=FALSE}
 library(tidyverse) # обработка данных, графики...
 library(skimr) # описательные статистики
 library(rio) # импорт фантастического количества форматов данных
@@ -310,7 +314,7 @@ skim(typical_removed)
 Заполним пропущенные значения в переменной `IQ` минимальным значением, доход `Income` — медианным,  `ID` — числом, а возраст `Age` — средним.
 Эти пожелания передадим аргументу `replace` списком.
 
-```{r}
+```{r, eval=FALSE}
 typical_replaced <- replace_na(data = typical_data,
   replace = list(IQ =  min(typical_data$IQ, na.rm = TRUE),
   Income = median(typical_data$Income, na.rm = TRUE),
@@ -461,7 +465,7 @@ tidy(k_means_protein)
 исходные данные и ещё куча настроек вроде размера точек и цвета наблюдений-выбросов.
 Мы только попросим выделять цветом кластеры по их границам и укажем аргумент `ellipse.type = 'convex'`.
 
-```{r}
+```{r, echo=FALSE}
 fviz_cluster(object = k_means_protein, data = protein_no_country,
              ellipse.type = "convex")
 ```
