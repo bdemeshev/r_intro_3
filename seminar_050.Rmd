@@ -4,19 +4,39 @@ editor_options:
   chunk_output_type: console
 date: "Октябрь 8, 2018"
 output:
+  pdf_document: 
+    toc: false
+    toc_depth: 2
+    keep_tex: yes
+    number_sections: true
+    fig_width: 5
+    fig_height: 4
+    fig_caption: true
+    highlight: tango
+    latex_engine: xelatex
+  word_document:
+    toc: yes
   html_document:
     keep_md: no
     number_sections: yes
     toc: yes
-  word_document:
-    toc: yes
-  pdf_document:
-    toc: yes
 lang: ru-RU
+mainfont: Arial
+header-includes:
+- \newfontfamily{\cyrillicfonttt}{Arial}
+- \newfontfamily{\cyrillicfont}{Arial}
+- \newfontfamily{\cyrillicfontsf}{Arial}
 ---
 
 
 Подключаем пакеты!
+
+Все с официального репозитория кроме одного:
+```{r, eval=FALSE}
+devtools::install_github("thomasp85/patchwork")
+```
+
+
 
 ```{r, "setup-chunk", message=FALSE, warning=FALSE}
 library(tidyverse) # обработка данных, графики...
@@ -88,6 +108,7 @@ skim(protein_stand)
 
 ```{r}
 protein_no_country <- protein_stand %>% column_to_rownames(var = "Country")
+set.seed(777)
 k_means_protein <- kmeans(protein_no_country, centers = 3)
 k_means_protein
 ```
@@ -102,6 +123,9 @@ k_means_protein
 ```{r, echo=FALSE}
 fviz_cluster(object = k_means_protein, data = protein_no_country,
              ellipse.type = "convex")
+k_means_protein$cluster
+
+
 ```
 
 ## Выбор числа кластеров
@@ -111,9 +135,10 @@ fviz_cluster(object = k_means_protein, data = protein_no_country,
 
 
 ```{r}
+set.seed(1)
 g1 <- fviz_nbclust(protein_no_country, kmeans, method = "wss") +
   labs(subtitle = "Elbow method")
-g1
+
 
 g2 <- fviz_nbclust(protein_no_country, kmeans, method = "silhouette") +
   labs(subtitle = "Silhouette method")
@@ -121,7 +146,7 @@ g2
 
 g3 <- fviz_nbclust(protein_no_country, kmeans, method = "gap_stat") +
   labs(subtitle = "Gap statistic method")
-g3
+(g1 / g2) | g3
 ```
 
 # Иерархическая кластеризация
@@ -166,7 +191,8 @@ glimpse(protein_plus2)
 
 ```{r}
 protein_cor <- cor(protein_no_country)
-corrplot(protein_cor, order = "hclust", addrect = 3)
+protein_cor
+corrplot(protein_cor, order = "hclust", addrect = 2)
 ```
 
 
@@ -185,6 +211,8 @@ usa <- USArrests
 
 # usa_stand <- ___(___ , ___, ~ as.vector(scale(.)))
 # ___
+
+# rownames(usa_stand) <- rownames(USArrests)
 ```
 
 
