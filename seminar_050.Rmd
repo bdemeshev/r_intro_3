@@ -295,3 +295,38 @@ usa <- USArrests
 Визуализации [кластеров в известных наборах данных] (https://cran.r-project.org/web/packages/dendextend/vignettes/Cluster_Analysis.html)
 
 Ура! :)
+
+# Множественная регрессия
+
+```{r}
+model_a = lm(data = diamonds, price ~ carat + x + y + z)
+summary(model_a)
+```
+
+Современный подход: всё в табличку!
+```{r}
+res = tidy(model_a)
+res
+
+res2 = glance(model_a)
+res2
+```
+
+Доверительные интервалы для коэффициентов:
+```{r}
+confint(model_a, level = 0.8)
+```
+
+Тест Вальда на сравнение двух вложенных моделей:
+```{r}
+library(lmtest)
+model_b = lm(data = diamonds, price ~ carat)
+waldtest(model_b, model_a)
+```
+
+Ура :)
+
+
+
+
+
