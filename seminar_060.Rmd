@@ -50,8 +50,9 @@ library(estimatr) # модели с робастными ошибками
 Правильно укажите путь к данным относительно `.Rmd`-файла:
 
 ```{r}
-pulse <- import("___/pulse.txt")
+pulse <- import("data/pulse.txt")
 skim(pulse)
+
 ```
 
 - Сколько в данных наблюдений? Сколько переменных?
@@ -60,6 +61,8 @@ skim(pulse)
 Вернём факторным переменным положенный статус!
 
 ```{r}
+pulse_fct = pulse %>% mutate(Gender = factor(Gender), 
+                             Alcohol = factor(Alcohol))
 pulse_fct <- pulse %>%
   mutate_at(vars(-Weight, -Height, -Age, -Pulse1, -Pulse2), factor)
 ```
@@ -156,7 +159,7 @@ summary(model_ur)
 * Упражнение 3.
 
 Оцените более сложную модель для набора данных о домах.
-Среди объясняющих переменных укажите площадь дома `lotsize`, количсевто спален `bedrooms`
+Среди объясняющих переменных укажите площадь дома `lotsize`, количеcтво спален `bedrooms`
 и бинарную переменную `prefarea`, которая равна 1 для домов, расположенных в хороших районах.
 
 ```{r}
@@ -169,6 +172,8 @@ summary(model_ur)
 
 ```{r}
 ggnostic(model = model_ur)
+pulse_augmented = augment(model_ur, pulse_fct)
+filter(pulse_augmented, .cooksd > 0.6)
 ```
 
 На этом графике четыре линии!
@@ -205,7 +210,7 @@ D_i = \frac{\sum_{j=1}^n(\hat y_j - \hat y_j^{(-i)})^2}{k\hat\sigma^2},
 Построим 5\%-ые доверительные интервалы для всех коэффициентов модели `model_ur`.
 Для этого будем использовать команду `coefci()`.
 Поменять уровень значимости можно аргументом `level`.
-Затем визуилизируем получившиеся доверительные интервалы командой `sjp.lm()` из пакета `sjPlot`.
+Затем визуализируем получившиеся доверительные интервалы командой `sjp.lm()` из пакета `sjPlot`.
 
 ```{r}
 coefci(model_ur)
@@ -347,6 +352,22 @@ waldtest(model_r, model_ur, vcov = vcovHC)
 # waldtest(___, ___, vcov =  vcovHC)
 ```
 
+Вторая вариация: переоценка модели.
+```{r}
+model_r_rob <- 
+  lm_robust(data = pulse_fct, Pulse2 ~ Pulse1)
+model_ur_rob <- 
+  lm_robust(data = pulse_fct, 
+    Pulse2 ~ Weight + Pulse1 + Ran + Smokes)
+summary(model_ur_rob)
+```
+
+Тест Вальда:
+```{r}
+waldtest(model_r_rob, model_ur_rob)
+# waldtest(model_r, model_ur_rob)
+```
+
 
 # Инструментальные переменные
 
@@ -409,6 +430,12 @@ model_iv <- ivreg(data = labor,
     experience + I(experience^2) + educwm + educwf)
 summary(model_iv, diagnostics = TRUE)
 ```
+
+
+```{r}
+lm(data = pulse_fct, Pulse2 ~ (Smokes + Pulse1 + Ran)^3)
+```
+
 
 После вертикальной палочки `|` в команде `ivreg` указывают экзогенные переменные,
 используемые в качестве инструментов.
