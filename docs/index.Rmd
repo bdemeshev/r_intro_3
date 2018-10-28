@@ -39,6 +39,7 @@ lang: ru-RU
 * Семинар 5, 8 октября. Кластеризация — окончание.
 
     - Условие и данные, [sem_050.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_050.zip)
+    
 
 
 
@@ -46,6 +47,7 @@ lang: ru-RU
 
 * Семинар 6, 22 октября. Маркдаун и красивое представление результатов.
     - Условие и данные, [sem_060.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_060.zip)
+    - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_050_solved.html)
 
 
 * Семинар 7, 29 октября. Логистическая регрессия и классификация.
