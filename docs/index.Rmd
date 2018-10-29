@@ -51,7 +51,8 @@ lang: ru-RU
 
 
 * Семинар 7, 29 октября. Логистическая регрессия и классификация.
-  - Условие и данные, [sem_070.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_070.zip)
+    - Условие и данные, [sem_070.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_070.zip)
+    - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_070_solved.html)
 
 !!!5 ноября —  праздник
 
