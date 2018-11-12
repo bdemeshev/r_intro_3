@@ -257,7 +257,7 @@ modelLookup(model = "ranger")
 Можно заказать количество перебираемых значений для каждого параметра:
 
 ```{r}
-ranger_model <- train(y ~ . - Class, data = educ_test,
+ranger_model <- train(y ~ ., data = educ_test,
                       method = "ranger",
                       na.action = na.omit,
                       importance = "impurity",
@@ -269,7 +269,7 @@ ranger_model <- train(y ~ . - Class, data = educ_test,
 ```{r}
 grid <- expand.grid(mtry = c(5, 10), min.node.size = c(1, 5), splitrule = "gini")
 
-ranger_model <- train(y ~ . - Class, data = educ_test,
+ranger_model <- train(y ~ ., data = educ_test,
             tuneGrid = grid, method = "ranger", na.action = na.omit)
 ranger_model
 ```
