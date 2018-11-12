@@ -58,6 +58,10 @@ lang: ru-RU
 
 * Семинар 8, 12 ноября. Кросс-валидация.
 
+    - Условие и данные, [sem_080.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_080.zip)
+
+
+
 * Семинар 9, 19 ноября. Карты и ответы на вопросы :)
 
 
