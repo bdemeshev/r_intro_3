@@ -42,9 +42,6 @@ lang: ru-RU
     
 
 
-
-!!!15 октября занятий не будет
-
 * Семинар 6, 22 октября. Маркдаун и красивое представление результатов.
     - Условие и данные, [sem_060.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_060.zip)
     - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_050_solved.html)
@@ -54,7 +51,6 @@ lang: ru-RU
     - Условие и данные, [sem_070.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_070.zip)
     - [Решение семинара](http://bdemeshev.github.io/r_intro_3/seminar_070_solved.html)
 
-!!!5 ноября —  праздник
 
 * Семинар 8, 12 ноября. Кросс-валидация.
 
@@ -63,6 +59,9 @@ lang: ru-RU
 
 
 * Семинар 9, 19 ноября. Карты и ответы на вопросы :)
+
+    - Условие и данные, [sem_080.zip](https://github.com/bdemeshev/r_intro_3/raw/master/archives/sem_090.zip)
+
 
 
 Место: Шаболовка 26, 5310. Приносите свои ноутбуки!!!
